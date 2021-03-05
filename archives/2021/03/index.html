@@ -9,16 +9,16 @@
     
     <title>
         
-            归档: 2021/3 |
+            Archive: 2021/3 |
         
         Keep Theme
     </title>
     <link rel="stylesheet" href="/css/style.css">
-    <link rel="shortcut icon" href="/blog/images/logo.svg">
+    <link rel="shortcut icon" href="/images/logo.svg">
     <link rel="stylesheet" href="/css/font-awesome.min.css">
     <script id="hexo-configurations">
     let KEEP = window.KEEP || {};
-    KEEP.hexo_config = {"hostname":"andyjjrt.github.io","root":"/blog/","language":"zh-tw"};
+    KEEP.hexo_config = {"hostname":"andyjjrt.github.io","root":"/","language":"zh-tw"};
     KEEP.theme_config = {"toc":{"enable":false,"number":false,"expand_all":false,"init_open":false},"style":{"primary_color":"#0066CC","avatar":"/images/avatar.svg","favicon":"/images/logo.svg","article_img_align":"left","left_side_width":"260px","content_max_width":"920px","hover":{"shadow":false,"scale":false},"first_screen":{"enable":false,"background_img":"./images/bg.svg","description":"Keep writing and Keep loving."},"scroll":{"progress_bar":{"enable":false},"percent":{"enable":false}}},"local_search":{"enable":false,"preload":false},"code_copy":{"enable":false,"style":"default"},"pjax":{"enable":false},"lazyload":{"enable":false},"version":"3.4.1"};
     KEEP.language_ago = {"second":"%s seconds ago","minute":"%s minutes ago","hour":"%s hours ago","day":"%s days ago","week":"%s weeks ago","month":"%s months ago","year":"%s years ago"};
   </script>
@@ -26,193 +26,199 @@
 
 
 <body>
-$temp-width = hexo-config('style.left_side_width');
-$page-aside-width = $temp-width ? convert($temp-width):260px;
+<div class="progress-bar-container">
+    
 
-.page-container {
-  position: relative;
-  transition-t("padding-left", "0", "0.3", "ease-out");
-
-
-  +keep-tablet() {
-    padding-left: 0 !important;
-  }
+    
+</div>
 
 
-  .page-main-content {
-    padding-top: $header-height;
-    position: relative;
+<main class="page-container">
 
-    .header-shrink & {
-      padding-top: $header-shrink-height;
+    
 
+    <div class="page-main-content">
 
-      +keep-tablet() {
-        padding-top: $header-shrink-height * 0.9;
-      }
+        <div class="page-main-content-top">
+            <header class="header-wrapper">
 
-      +keep-mobile() {
-        padding-top: $header-shrink-height * 0.8;
-      }
-    }
+    <div class="header-content">
+        <div class="left">
+            <a class="logo-title" href="/">
+                Keep Theme
+            </a>
+        </div>
 
+        <div class="right">
+            <div class="pc">
+                <ul class="menu-list">
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/"
+                            >
+                                HOME
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class="active"
+                               href="/archives"
+                            >
+                                ARCHIVES
+                            </a>
+                        </li>
+                    
+                    
+                </ul>
+            </div>
+            <div class="mobile">
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-    +keep-tablet() {
-      padding-top: $header-height * 0.9;
-    }
+    <div class="header-drawer">
+        <ul class="drawer-menu-list">
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/">HOME</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class="active"
+                       href="/archives">ARCHIVES</a>
+                </li>
+            
+        </ul>
+    </div>
 
+    <div class="window-mask"></div>
 
-    +keep-mobile() {
-      padding-top: $header-height * 0.8;
-    }
-
-
-    .page-main-content-top {
-      position: fixed;
-      top: 0;
-      right: 0;
-      width: 100%;
-      height: $header-height;
-      z-index: $z-index-5;
-      box-sizing: border-box;
-      transition-t("transform, padding-left, height", "0, 0, 0", "0.3, 0.2, 0.2", "ease-out, linear, ease");
-
-      &.hide {
-        transform: translateY(-105%);
-      }
-
-      .header-shrink & {
-        height: $header-shrink-height;
-
-        +keep-tablet() {
-          height: $header-shrink-height * 0.9;
-        }
-
-        +keep-mobile() {
-          height: $header-shrink-height * 0.8;
-        }
-      }
-
-
-      +keep-tablet() {
-        height: $header-height * 0.9;
-        padding-left: 0 !important;
-      }
-
-
-      +keep-mobile() {
-        height: $header-height  * 0.8;
-      }
-
-    }
-
-
-    .page-main-content-middle {
-      box-sizing: border-box;
-      width: 100%;
-      display: flex;
-      justify-content: center;
-      padding: $component-spacing-value 0;
-      background: var(--background-color);
-
-      +keep-tablet() {
-        padding: $component-spacing-value * 0.8 0;
-      }
-
-      +keep-mobile() {
-        padding: $component-spacing-value * 0.6 0;
-      }
-
-      .main-content {
-        position: relative;
-        box-sizing: border-box;
-        width: $main-content-width;
-        max-width: $content-max-width;
-        height: 100%;
-
-        +keep-tablet() {
-          width: $main-content-width-tablet;
-        }
-
-        +keep-mobile() {
-          width: $main-content-width-mobile;
-        }
-      }
-    }
+</header>
 
 
-    .page-main-content-bottom {
-      width: 100%;
-    }
-  }
+        </div>
+
+        <div class="page-main-content-middle">
+
+            <div class="main-content">
+
+                
+                    <div class="fade-in-down-animation">
+    <div class="archive-container ">
+        
+<div class="archive-list-container">
+    
+        <section class="archive-item">
+            <div class="archive-item-header">
+                <span class="archive-year">2021</span>
+                <span class="archive-year-post-count">[1]</span>
+            </div>
+            <ul class="article-list">
+                
+                    <li class="article-item">
+                        <a class="article-title"
+                           href="/2021/03/05/hello-world/"
+                        >Hello World</a>
+                        <span class="article-date">03-05</span>
+                    </li>
+                
+            </ul>
+        </section>
+    
+</div>
+
+    </div>
+</div>
+
+                
+            </div>
+
+        </div>
+
+        <div class="page-main-content-bottom">
+            <footer class="footer">
+    <div class="info-container">
+        <div class="copyright-info info-item">
+            &copy;
+            
+              <span>2020</span>&nbsp;-&nbsp;
+            
+            2021&nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;<a href="/">Keep Team</a>
+        </div>
+        
+        <div class="theme-info info-item">
+            Powered by <a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;|&nbsp;Theme&nbsp;<a class="theme-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep v3.4.1</a>
+        </div>
+        
+    </div>
+</footer>
+
+        </div>
+    </div>
+
+    
+
+    <div class="right-bottom-side-tools">
+        <div class="side-tools-container">
+    <ul class="side-tools-list">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <li class="tools-item tool-expand-width flex-center">
+            <i class="fas fa-arrows-alt-h"></i>
+        </li>
+
+        <li class="tools-item tool-dark-light-toggle flex-center">
+            <i class="fas fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        
+            <li class="tools-item tool-scroll-to-top flex-center">
+                <i class="fas fa-arrow-up"></i>
+            </li>
+        
+
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list">
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+        
+    </ul>
+</div>
+
+    </div>
+
+    
+
+    <div class="image-viewer-container">
+    <img src="">
+</div>
 
 
-  .page-aside {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: - $page-aside-width;
-    width: $page-aside-width;
-    height: 100%;
-    z-index: $z-index-6;
-    overflow-y: auto;
-    padding: 20px;
-    box-sizing: border-box;
-    background: var(--background-color);
+    
 
-    hover-style(false, 0, 0);
-
-    transition-t("left, transform", "0, 0", "0.3, 0.2", "ease-out, linear");
-
-    +keep-tablet() {
-      left: 0 !important;
-      display: none !important;
-    }
-
-  }
+</main>
 
 
-  .post-tools {
-    position: fixed;
-    top: $header-height + $component-spacing-value;
-    right: $component-spacing-value;
-    transition-t("top", "0", "0.2", "ease");
-
-    .header-shrink & {
-      top: $header-shrink-height + $component-spacing-value;
-
-      +keep-tablet() {
-        top: $header-shrink-height * 0.9 + $component-spacing-value;
-      }
-
-      +keep-mobile() {
-        top: $header-shrink-height * 0.8 + $component-spacing-value;
-      }
-    }
-
-
-    +keep-tablet() {
-      top: $header-height * 0.9 + $component-spacing-value;
-      right: 10px;
-      transform: scale(0.82);
-      transform-origin: right top;
-    }
-
-
-    +keep-mobile() {
-      top: $header-height * 0.8 + $component-spacing-value;
-      right: 5px;
-      transform: scale(0.72);
-    }
-  }
-
-
-  .right-bottom-side-tools {
-    position: fixed;
-    bottom: 5%;
-    right: 0;
-  }
-}
 
 <script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/header-shrink.js"></script><script src="/js/back2top.js"></script><script src="/js/dark-light-toggle.js"></script>
 
