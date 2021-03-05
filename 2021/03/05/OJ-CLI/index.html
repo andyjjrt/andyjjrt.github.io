@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="Hexo Theme Keep">
+    <meta name="description" content="麻瓜玩沙的地方">
+    <meta name="author" content="andyjjrt">
+    
+    <title>
+        
+            OJ-CLI |
+        
+        andyjjrt&#39;s Blog
+    </title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="shortcut icon" href="/images/logo.svg">
+    <link rel="stylesheet" href="/css/font-awesome.min.css">
+    <script id="hexo-configurations">
+    let KEEP = window.KEEP || {};
+    KEEP.hexo_config = {"hostname":"andyjjrt.github.io","root":"/","language":"zh-tw"};
+    KEEP.theme_config = {"toc":{"enable":false,"number":false,"expand_all":false,"init_open":false},"style":{"primary_color":"#0066CC","avatar":"/images/avatar.svg","favicon":"/images/logo.svg","article_img_align":"left","left_side_width":"260px","content_max_width":"920px","hover":{"shadow":false,"scale":false},"first_screen":{"enable":false,"background_img":"/images/bg.svg","description":"Keep writing and Keep loving."},"scroll":{"progress_bar":{"enable":false},"percent":{"enable":false}}},"local_search":{"enable":false,"preload":false},"code_copy":{"enable":false,"style":"default"},"pjax":{"enable":false},"lazyload":{"enable":false},"version":"3.4.1"};
+    KEEP.language_ago = {"second":"%s seconds ago","minute":"%s minutes ago","hour":"%s hours ago","day":"%s days ago","week":"%s weeks ago","month":"%s months ago","year":"%s years ago"};
+  </script>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+
+    
+</div>
+
+
+<main class="page-container">
+
+    
+
+    <div class="page-main-content">
+
+        <div class="page-main-content-top">
+            <header class="header-wrapper">
+
+    <div class="header-content">
+        <div class="left">
+            <a class="logo-title" href="/">
+                andyjjrt&#39;s Blog
+            </a>
+        </div>
+
+        <div class="right">
+            <div class="pc">
+                <ul class="menu-list">
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/"
+                            >
+                                HOME
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/archives"
+                            >
+                                ARCHIVES
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/about"
+                            >
+                                ABOUT
+                            </a>
+                        </li>
+                    
+                    
+                </ul>
+            </div>
+            <div class="mobile">
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list">
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/">HOME</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/archives">ARCHIVES</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/about">ABOUT</a>
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="page-main-content-middle">
+
+            <div class="main-content">
+
+                
+                    <div class="fade-in-down-animation">
+    <div class="article-content-container">
+
+        <div class="article-title">
+            <span class="title-hover-animation">OJ-CLI</span>
+        </div>
+
+        
+            <div class="article-header">
+                <div class="avatar">
+                    <img src="/images/avatar.svg">
+                </div>
+                <div class="info">
+                    <div class="author">
+                        <span class="name">andyjjrt</span>
+                        
+                            <span class="author-label">Lv1</span>
+                        
+                    </div>
+                    <div class="meta-info">
+                        <div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fas fa-edit"></i>&nbsp;2021-03-05 22:55:49
+    </span>
+    
+    
+
+    
+    
+    
+    
+</div>
+
+                    </div>
+                </div>
+            </div>
+        
+
+        <div class="article-content markdown-body">
+            <h1 id="Installation"><a href="#Installation" class="headerlink" title="Installation"></a>Installation</h1><h3 id="Installation-in-NCCU-GHOST"><a href="#Installation-in-NCCU-GHOST" class="headerlink" title="Installation in NCCU GHOST"></a>Installation in NCCU GHOST</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">echo &#39;alias oj&#x3D;&quot;python2.7 ~s10940&#x2F;oj-cli&#x2F;oj.py&quot;&#39; &gt;&gt; ~&#x2F;.profile</span><br><span class="line">source ~&#x2F;.profile</span><br></pre></td></tr></table></figure>
+
+<h3 id="Installation-from-source-code"><a href="#Installation-from-source-code" class="headerlink" title="Installation from source code"></a>Installation from source code</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">cd ~</span><br><span class="line">git clone https:&#x2F;&#x2F;github.com&#x2F;andyjjrt&#x2F;oj-cli.git</span><br><span class="line">cd oj-cli</span><br><span class="line">echo &#39;alias oj&#x3D;&quot;python2.7 ~&#x2F;oj-cli&#x2F;oj&quot;&#39; &gt;&gt; ~&#x2F;.bashrc</span><br><span class="line">source ~&#x2F;.bashrc</span><br></pre></td></tr></table></figure>
+
+<p>If your shell is different like <code>ash</code>, you may need to change <code>.bashrc</code> to <code>.profile</code>.<br>After installation, please modify <code>CONTEST_NAME</code> variable in <code>constants.py</code> to the target contest name.</p>
+<h1 id="Commands"><a href="#Commands" class="headerlink" title="Commands"></a>Commands</h1><h2 id="oj-login"><a href="#oj-login" class="headerlink" title="oj login"></a><code>oj login</code></h2><h4 id="About"><a href="#About" class="headerlink" title="About"></a>About</h4><p>Use <code>oj login</code> to login to the account in OnlineJudge. It required you to enter your account information so that <code>oj-cli</code> could access OnlineJudge service successfully. After entering your username and password. <code>oj-cli</code> will respond if you login successfully or not.</p>
+<h4 id="Usage"><a href="#Usage" class="headerlink" title="Usage"></a>Usage</h4><p>No argument required. Only enter <code>oj login</code> and fill the account information to login to OnlineJudge.</p>
+<h4 id="Example"><a href="#Example" class="headerlink" title="Example"></a>Example</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ oj login</span><br><span class="line">Usernme:</span><br><span class="line">Password:</span><br></pre></td></tr></table></figure>
+
+<h3 id="oj-get-lt-assign-no-gt"><a href="#oj-get-lt-assign-no-gt" class="headerlink" title="oj get &lt;assign_no&gt;"></a><code>oj get &lt;assign_no&gt;</code></h3><h4 id="About-1"><a href="#About-1" class="headerlink" title="About"></a>About</h4><p>Use <code>oj get &lt;assign_no&gt;</code> to download the latest assignment from contest. The downloaded files are stored in folder <code>hwX</code>. The folder includes testing data, output data, and template C script, which are named as <code>1.in</code>, <code>1.out</code>, and <code>main.c</code> separately.</p>
+<h4 id="Usage-1"><a href="#Usage-1" class="headerlink" title="Usage"></a>Usage</h4><p><code>oj get</code> only required one argument to execute.</p>
+<h5 id="assign-no"><a href="#assign-no" class="headerlink" title="assign_no"></a>assign_no</h5><p>assign_no represents your assign number like <code>hw1</code>, <code>hw2</code> according to your updates. <code>oj-cli</code> will prompt <code>Invalid Assign Number!</code> if the input assign number has not opened and give valid assign numbers.</p>
+<h4 id="Example-1"><a href="#Example-1" class="headerlink" title="Example"></a>Example</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ oj get hw1</span><br><span class="line">Made a [hw1] folder in your current directory.</span><br></pre></td></tr></table></figure>
+
+<h3 id="oj-get-p-lt-problem-no-gt"><a href="#oj-get-p-lt-problem-no-gt" class="headerlink" title="oj get_p &lt;problem_no&gt;"></a><code>oj get_p &lt;problem_no&gt;</code></h3><h4 id="About-2"><a href="#About-2" class="headerlink" title="About"></a>About</h4><p>Use <code>oj get_p &lt;problem_no&gt;</code> to download the problem in problem list. The downloaded files are stored in folder <code>problem_X</code>. The folder includes testing data, output data, and template C script, which are named as <code>1.in</code>, <code>1.out</code>, and <code>main.c</code> separately.</p>
+<h4 id="Usage-2"><a href="#Usage-2" class="headerlink" title="Usage"></a>Usage</h4><p><code>oj get_p</code> only required one argument to execute.</p>
+<h5 id="problem-no"><a href="#problem-no" class="headerlink" title="problem_no"></a>problem_no</h5><p>problem_no represents your problem display id like <code>1</code>, <code>57-2</code> according to your updates. <code>oj-cli</code> will prompt <code>Invalid Problem Id!</code> if the input problem id is invalid.</p>
+<h5 id="Notice"><a href="#Notice" class="headerlink" title="Notice"></a>Notice</h5><p>problem_no somtimes has blanks, cli will automatically replace them.</p>
+<h4 id="Example-2"><a href="#Example-2" class="headerlink" title="Example"></a>Example</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ oj get_p 57-2</span><br><span class="line">Made a [problem_57-2] folder in your current directory.</span><br></pre></td></tr></table></figure>
+
+<h3 id="oj-submit-lt-assign-no-gt-lt-code-file-gt"><a href="#oj-submit-lt-assign-no-gt-lt-code-file-gt" class="headerlink" title="oj submit &lt;assign_no&gt; &lt;code_file&gt;"></a><code>oj submit &lt;assign_no&gt; &lt;code_file&gt;</code></h3><h4 id="About-3"><a href="#About-3" class="headerlink" title="About"></a>About</h4><p>Use <code>oj submit &lt;assign_no&gt; &lt;code_file&gt;</code> to submit your code to contest and return the results. </p>
+<h4 id="Usage-3"><a href="#Usage-3" class="headerlink" title="Usage"></a>Usage</h4><p><code>oj submit</code> required two arguments to execute.</p>
+<h5 id="assign-no-1"><a href="#assign-no-1" class="headerlink" title="assign_no"></a>assign_no</h5><p>assign_no represents your assign number like <code>hw1</code>, <code>hw2</code> according to your updates. <code>oj-cli</code> will prompt <code>Invalid Assign Number!</code> if the input assign number has not opened and give valid assign numbers. </p>
+<h5 id="code-file"><a href="#code-file" class="headerlink" title="code_file"></a>code_file</h5><p>code_file is the path to your script. <code>oj</code> will read the file then submit this answer to OnlineJudge Service.</p>
+<h4 id="Example-3"><a href="#Example-3" class="headerlink" title="Example"></a>Example</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">$ oj submit hw2 hw2.c</span><br><span class="line">Submit successfully!</span><br><span class="line">Getting submission status...</span><br><span class="line">&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;</span><br><span class="line">Result: AC(Accept)              Score: 100</span><br><span class="line">|ID |Status                |   Time|  Mem| Score|</span><br><span class="line">|#1 |AC(Accept)            |    0ms|  2MB|    20|</span><br><span class="line">|#2 |AC(Accept)            |    2ms|  2MB|    20|</span><br><span class="line">|#3 |AC(Accept)            |   40ms|  2MB|    20|</span><br><span class="line">|#4 |AC(Accept)            |   75ms|  2MB|    20|</span><br><span class="line">|#5 |AC(Accept)            |    5ms|  2MB|    20| </span><br><span class="line">&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D; </span><br></pre></td></tr></table></figure>
+
+
+<h3 id="oj-submit-p-lt-problem-no-gt-lt-language-gt-lt-code-file-gt"><a href="#oj-submit-p-lt-problem-no-gt-lt-language-gt-lt-code-file-gt" class="headerlink" title="oj submit_p &lt;problem_no&gt; &lt;language&gt; &lt;code_file&gt;"></a><code>oj submit_p &lt;problem_no&gt; &lt;language&gt; &lt;code_file&gt;</code></h3><h4 id="About-4"><a href="#About-4" class="headerlink" title="About"></a>About</h4><p>Use <code>oj submit_p &lt;problem_no&gt; &lt;language&gt; &lt;code_file&gt;</code> to submit your code to problem and return the results. </p>
+<h4 id="Usage-4"><a href="#Usage-4" class="headerlink" title="Usage"></a>Usage</h4><p><code>oj submit_p</code> required three arguments to execute.</p>
+<h5 id="problem-no-1"><a href="#problem-no-1" class="headerlink" title="problem_no"></a>problem_no</h5><p>assign_no represents your assign number like <code>1</code>, <code>2</code> according to your updates. <code>oj-cli</code> will prompt <code>Invalid Assign Number!</code> if the input assign number soes not exist. Notice that blanks in <code>problem_no</code> will be replaced to “+”</p>
+<h5 id="language"><a href="#language" class="headerlink" title="language"></a>language</h5><p>language is your coding language. The avaliable languages now are<br>C, C++, Python2, Python3, Golang, Java</p>
+<p>Notice your capital letter!!</p>
+<h5 id="code-file-1"><a href="#code-file-1" class="headerlink" title="code_file"></a>code_file</h5><p>code_file is the path to your script. <code>oj</code> will read the file then submit this answer to OnlineJudge Service.</p>
+<h4 id="Example-4"><a href="#Example-4" class="headerlink" title="Example"></a>Example</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">$ oj problem_submit 1091CP1_Exercise8 C ex8.c</span><br><span class="line">Submit successfully!!</span><br><span class="line">Getting submission status...</span><br><span class="line">&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;</span><br><span class="line">Result: AC(Accept)                     Score: 100</span><br><span class="line">|ID |Status                       |   Time|  Mem| Score|</span><br><span class="line">|#1 |AC(Accept)                   |    1ms|  2MB|    20|</span><br><span class="line">|#2 |AC(Accept)                   |    1ms|  2MB|    20|</span><br><span class="line">|#3 |AC(Accept)                   |    1ms|  2MB|    20|</span><br><span class="line">|#4 |AC(Accept)                   |    2ms|  2MB|    20|</span><br><span class="line">|#5 |AC(Accept)                   |    1ms|  2MB|    20|</span><br><span class="line">&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+<h3 id="oj-rank-lt-assign-no-gt"><a href="#oj-rank-lt-assign-no-gt" class="headerlink" title="oj rank &lt;assign_no&gt;"></a><code>oj rank &lt;assign_no&gt;</code></h3><h4 id="About-5"><a href="#About-5" class="headerlink" title="About"></a>About</h4><p>Use <code>oj rank &lt;assign_no&gt;</code> to view the class result of this assign.</p>
+<h4 id="Usage-5"><a href="#Usage-5" class="headerlink" title="Usage"></a>Usage</h4><p><code>oj rank</code> only required one argument to execute.</p>
+<h4 id="assign-no-2"><a href="#assign-no-2" class="headerlink" title="assign_no"></a>assign_no</h4><p>assign_no represents your assign number like <code>hw1</code>, <code>hw2</code> according to your updates. <code>oj-cli</code> will prompt <code>Invalid Assign Number!</code> if the input assign number has not opened and give valid assign numbers. </p>
+<h4 id="Example-5"><a href="#Example-5" class="headerlink" title="Example"></a>Example</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">$ oj rank hw2</span><br><span class="line">Your status of hw2 : AC(Accept)</span><br><span class="line">&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;</span><br><span class="line">   1~ 10 :  0  |  AC(Accept)             : 8</span><br><span class="line">  11~ 20 :  0  |  RE(Runtime Error)      : 29</span><br><span class="line">  21~ 30 :  0  |  PAC(Partial Accepted)  : 54</span><br><span class="line">  31~ 40 :  1  |  WA(Wrong Answer)       : 81</span><br><span class="line">  41~ 50 :  0  |  CE(Compilation Error)  : 10</span><br><span class="line">  51~ 60 :  0  |--------------------------------</span><br><span class="line">  61~ 70 :  0  |  Total submissions      : 182</span><br><span class="line">  71~ 80 :  0  |</span><br><span class="line">  81~ 90 :  0  |</span><br><span class="line">  91~100 : 12  |</span><br><span class="line">&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;</span><br><span class="line">For real score ranking,please go to the website. </span><br></pre></td></tr></table></figure>
+
+
+<h3 id="oj-update"><a href="#oj-update" class="headerlink" title="oj update"></a><code>oj update</code></h3><h4 id="About-6"><a href="#About-6" class="headerlink" title="About"></a>About</h4><p>Use <code>oj update</code> to get the latest assignments.</p>
+<h4 id="Usage-6"><a href="#Usage-6" class="headerlink" title="Usage"></a>Usage</h4><p>No argument required. Only enter <code>oj update</code> and it will automatically get the assignments and the problems.</p>
+<h4 id="Example-6"><a href="#Example-6" class="headerlink" title="Example"></a>Example</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ oj update</span><br><span class="line">Updated problems successfully!</span><br><span class="line">Found HomeWork: hw01 [Nim!]</span><br><span class="line">Found HomeWork: ex01 [Tree Postorder]</span><br><span class="line">Updated assign successfully!</span><br></pre></td></tr></table></figure>
+
+
+<h3 id="oj-status-lt-assign-no-gt"><a href="#oj-status-lt-assign-no-gt" class="headerlink" title="oj status &lt;assign_no&gt;"></a><code>oj status &lt;assign_no&gt;</code></h3><h4 id="About-7"><a href="#About-7" class="headerlink" title="About"></a>About</h4><p>Use <code>oj status &lt;assign_no&gt;</code> to view the latest 20 submissions of this contest.</p>
+<h4 id="Usage-7"><a href="#Usage-7" class="headerlink" title="Usage"></a>Usage</h4><p><code>oj status</code> only required one argument to execute.</p>
+<h5 id="assign-no-3"><a href="#assign-no-3" class="headerlink" title="assign_no"></a>assign_no</h5><p>assign_no represents your assign number like <code>hw1</code>, <code>hw2</code> according to your updates. <code>oj-cli</code> will prompt <code>Invalid Assign Number!</code> if the input assign number has not opened and give valid assign numbers. </p>
+<h4 id="Example-7"><a href="#Example-7" class="headerlink" title="Example"></a>Example</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">$ oj status hw2</span><br><span class="line">&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;</span><br><span class="line">|  Contest Name: hw2                                             |</span><br><span class="line">&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;</span><br><span class="line">|User        |Status                     |   Time|  Mem|               When|</span><br><span class="line">|108xxxxxx   |WA(Wrong Answer)           |    0ms|  2MB|2020-12-18 10:31:12|</span><br><span class="line">|109xxxxxx   |AC(Accept)                 |    0ms|  2MB|2020-12-18 10:07:14|</span><br><span class="line">|109xxxxxx   |PAC(Partial Accepted)      |    0ms|  2MB|2020-12-18 09:20:10|</span><br><span class="line">|109xxxxxx   |PAC(Partial Accepted)      |   21ms|  2MB|2020-12-18 09:20:02|</span><br><span class="line">|109xxxxxx   |PAC(Partial Accepted)      |   17ms|  2MB|2020-12-18 09:07:19|</span><br><span class="line">|109xxxxxx   |PAC(Partial Accepted)      |    1ms|  4MB|2020-12-18 08:50:13|</span><br><span class="line">&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
+
+<h3 id="oj-mystat-lt-option-gt"><a href="#oj-mystat-lt-option-gt" class="headerlink" title="oj mystat &lt;option&gt;"></a><code>oj mystat &lt;option&gt;</code></h3><h4 id="About-8"><a href="#About-8" class="headerlink" title="About"></a>About</h4><p>Use <code>oj mystat &lt;option&gt;</code> to view your latest 20 submissions of this contest, each of the submission has the specific ID.</p>
+<h4 id="Usage-8"><a href="#Usage-8" class="headerlink" title="Usage"></a>Usage</h4><p><code>oj mystat</code> only required one argument to execute.</p>
+<h5 id="option"><a href="#option" class="headerlink" title="option"></a>option</h5><p>Here we have two options:</p>
+<ol>
+<li>assign_no represents your assign number like <code>hw1</code>, <code>hw2</code> according to your updates. <code>oj-cli</code> will prompt <code>Invalid Assign Number!</code> if the input assign number has not opened and give valid assign numbers.  </li>
+<li>IDx is the specific ID that <code>oj mystat &lt;hwx&gt;</code> gives you, here you can see details of this submition.<h4 id="Note"><a href="#Note" class="headerlink" title="Note"></a>Note</h4>The ID will only update if you type <code>oj mystat &lt;hwx&gt;</code></li>
+</ol>
+<h4 id="Example-8"><a href="#Example-8" class="headerlink" title="Example"></a>Example</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">$ oj mystat hw1</span><br><span class="line">&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;</span><br><span class="line">|  Contest Name: hw1                                     |</span><br><span class="line">&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;</span><br><span class="line">|ID  |Status                     |   Time|  Mem|               When|</span><br><span class="line">|ID 0|AC(Accept)                 |    0ms|  2MB|2020-12-17 10:39:13|</span><br><span class="line">&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;</span><br><span class="line"></span><br><span class="line">$ oj mystat ID4</span><br><span class="line">&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;</span><br><span class="line">Result: PAC(Partial Accepted)   Score:  20</span><br><span class="line">|ID |Status                |   Time|  Mem| Score|</span><br><span class="line">|#1 |AC(Accept)            |    1ms|  2MB|    20|</span><br><span class="line">|#2 |WA(Wrong Answer)      |    2ms|  2MB|     0|</span><br><span class="line">|#3 |WA(Wrong Answer)      |   28ms|  2MB|     0|</span><br><span class="line">|#4 |WA(Wrong Answer)      |   48ms|  2MB|     0|</span><br><span class="line">|#5 |WA(Wrong Answer)      |    5ms|  2MB|     0|</span><br><span class="line">&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D; </span><br></pre></td></tr></table></figure>
+
+<h3 id="oj-dl-lt-ID-gt"><a href="#oj-dl-lt-ID-gt" class="headerlink" title="oj dl &lt;ID&gt;"></a><code>oj dl &lt;ID&gt;</code></h3><h4 id="About-9"><a href="#About-9" class="headerlink" title="About"></a>About</h4><p>Use <code>oj dl &lt;ID&gt;</code> to download your specific submission’s source code.</p>
+<h4 id="Usage-9"><a href="#Usage-9" class="headerlink" title="Usage"></a>Usage</h4><p><code>oj dl</code> only required one argument to execute.</p>
+<h4 id="option-1"><a href="#option-1" class="headerlink" title="option"></a>option</h4><p>ID is the specific ID that <code>oj mystat &lt;hwx&gt;</code> gives you, here you can see details of this submition.</p>
+<h4 id="Note-1"><a href="#Note-1" class="headerlink" title="Note"></a>Note</h4><p>The ID will only update if you type <code>oj mystat &lt;hwx&gt;</code></p>
+<h4 id="Example-9"><a href="#Example-9" class="headerlink" title="Example"></a>Example</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">$ oj dl ID0</span><br><span class="line">&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;</span><br><span class="line">Result: AC(Accept)              Score: 100</span><br><span class="line">|ID |Status                |   Time|  Mem| Score|</span><br><span class="line">|#1 |AC(Accept)            |    0ms|  2MB|    20|</span><br><span class="line">|#2 |AC(Accept)            |    2ms|  2MB|    20|</span><br><span class="line">|#3 |AC(Accept)            |   40ms|  2MB|    20|</span><br><span class="line">|#4 |AC(Accept)            |   75ms|  2MB|    20|</span><br><span class="line">|#5 |AC(Accept)            |    5ms|  2MB|    20|</span><br><span class="line">&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;</span><br><span class="line">Downloaded your file!!!</span><br><span class="line">File name:1097030xx|xxxxxxxxxxxxxxxxxxxxxxx.c in yor current directory. </span><br></pre></td></tr></table></figure>
+        </div>
+
+        
+
+        
+            <div class="article-nav">
+                
+                
+                    <div class="article-next">
+                        <a class="next"
+                           rel="next"
+                           href="/2021/03/05/%E5%BB%BA%E7%BD%AEhexo-blog/"
+                        >
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">建置hexo-blog</span>
+                                <span class="post-nav-item">Next posts</span>
+                            </span>
+                            <span class="right arrow-icon flex-center">
+                              <i class="fas fa-chevron-right"></i>
+                            </span>
+                        </a>
+                    </div>
+                
+            </div>
+        
+
+        
+    </div>
+</div>
+
+
+                
+            </div>
+
+        </div>
+
+        <div class="page-main-content-bottom">
+            <footer class="footer">
+    <div class="info-container">
+        <div class="copyright-info info-item">
+            &copy;
+            
+              <span>2020</span>&nbsp;-&nbsp;
+            
+            2021&nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;<a href="/">andyjjrt</a>
+        </div>
+        
+        <div class="theme-info info-item">
+            Powered by <a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;|&nbsp;Theme&nbsp;<a class="theme-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep v3.4.1</a>
+        </div>
+        
+    </div>
+</footer>
+
+        </div>
+    </div>
+
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="tools-list">
+        <!-- TOC aside toggle -->
+        
+
+        <!-- go comment -->
+        
+    </ul>
+</div>
+
+        </div>
+    
+
+    <div class="right-bottom-side-tools">
+        <div class="side-tools-container">
+    <ul class="side-tools-list">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <li class="tools-item tool-expand-width flex-center">
+            <i class="fas fa-arrows-alt-h"></i>
+        </li>
+
+        <li class="tools-item tool-dark-light-toggle flex-center">
+            <i class="fas fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        
+            <li class="tools-item tool-scroll-to-top flex-center">
+                <i class="fas fa-arrow-up"></i>
+            </li>
+        
+
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list">
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+        
+    </ul>
+</div>
+
+    </div>
+
+    
+
+    <div class="image-viewer-container">
+    <img src="">
+</div>
+
+
+    
+
+</main>
+
+
+
+<script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/header-shrink.js"></script><script src="/js/back2top.js"></script><script src="/js/dark-light-toggle.js"></script>
+
+
+
+
+
+
+
+<div class="post-scripts">
+    
+</div>
+
+
+
+</body>
+</html>
