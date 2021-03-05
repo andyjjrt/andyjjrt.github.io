@@ -24,284 +24,193 @@
 
 
 <body>
-.progress-bar-container {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: $z-index-9;
+$temp-width = hexo-config('style.left_side_width');
+$page-aside-width = $temp-width ? convert($temp-width):260px;
 
-  if (hexo-config('pjax.enable') == true) {
-
-    .pjax-progress-bar {
-      position: absolute;
-      top: 0;
-      left: 0;
-      height: 2px;
-      width: 0;
-      background: var(--pjax-progress-bar-color);
-      visibility: hidden;
-      opacity: 0;
-      z-index: $z-index-8;
-      transition-t("width", "0", "0.1", "linear");
+.page-container {
+  position: relative;
+  transition-t("padding-left", "0", "0.3", "ease-out");
 
 
-      &.show {
-        opacity: 1;
-        visibility: visible;
-      }
-    }
+  +keep-tablet() {
+    padding-left: 0 !important;
+  }
 
 
-    .pjax-progress-icon {
-      position: absolute;
-      top: 0;
-      right: 0;
-      z-index: $z-index-8;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 7px 6px 0 0;
-      visibility: hidden;
-      font-size: 1.1rem;
-      color: var(--default-text-color);
+  .page-main-content {
+    padding-top: $header-height;
+    position: relative;
+
+    .header-shrink & {
+      padding-top: $header-shrink-height;
+
 
       +keep-tablet() {
-        padding: 6px 5px 0 0;
-        font-size: 1rem;
+        padding-top: $header-shrink-height * 0.9;
       }
 
-      &.show {
-        visibility: visible;
+      +keep-mobile() {
+        padding-top: $header-shrink-height * 0.8;
       }
     }
 
-  }
 
-  if (hexo-config('style.scroll.progress_bar.enable') == true) {
+    +keep-tablet() {
+      padding-top: $header-height * 0.9;
+    }
 
-    .scroll-progress-bar {
-      position: absolute;
+
+    +keep-mobile() {
+      padding-top: $header-height * 0.8;
+    }
+
+
+    .page-main-content-top {
+      position: fixed;
       top: 0;
-      left: 0;
-      width: 0;
-      height: $scroll-progress-bar-height;
-      visibility: hidden;
-      z-index: $z-index-7;
-      background: var(--primary-color);
-      transition-t("width", "0", "0.1", "linear");
+      right: 0;
+      width: 100%;
+      height: $header-height;
+      z-index: $z-index-5;
+      box-sizing: border-box;
+      transition-t("transform, padding-left, height", "0, 0, 0", "0.3, 0.2, 0.2", "ease-out, linear, ease");
 
       &.hide {
-        display: none !important;
+        transform: translateY(-105%);
+      }
+
+      .header-shrink & {
+        height: $header-shrink-height;
+
+        +keep-tablet() {
+          height: $header-shrink-height * 0.9;
+        }
+
+        +keep-mobile() {
+          height: $header-shrink-height * 0.8;
+        }
+      }
+
+
+      +keep-tablet() {
+        height: $header-height * 0.9;
+        padding-left: 0 !important;
+      }
+
+
+      +keep-mobile() {
+        height: $header-height  * 0.8;
+      }
+
+    }
+
+
+    .page-main-content-middle {
+      box-sizing: border-box;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      padding: $component-spacing-value 0;
+      background: var(--background-color);
+
+      +keep-tablet() {
+        padding: $component-spacing-value * 0.8 0;
+      }
+
+      +keep-mobile() {
+        padding: $component-spacing-value * 0.6 0;
+      }
+
+      .main-content {
+        position: relative;
+        box-sizing: border-box;
+        width: $main-content-width;
+        max-width: $content-max-width;
+        height: 100%;
+
+        +keep-tablet() {
+          width: $main-content-width-tablet;
+        }
+
+        +keep-mobile() {
+          width: $main-content-width-mobile;
+        }
       }
     }
 
+
+    .page-main-content-bottom {
+      width: 100%;
+    }
+  }
+
+
+  .page-aside {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: - $page-aside-width;
+    width: $page-aside-width;
+    height: 100%;
+    z-index: $z-index-6;
+    overflow-y: auto;
+    padding: 20px;
+    box-sizing: border-box;
+    background: var(--background-color);
+
+    hover-style(false, 0, 0);
+
+    transition-t("left, transform", "0, 0", "0.3, 0.2", "ease-out, linear");
+
+    +keep-tablet() {
+      left: 0 !important;
+      display: none !important;
+    }
+
+  }
+
+
+  .post-tools {
+    position: fixed;
+    top: $header-height + $component-spacing-value;
+    right: $component-spacing-value;
+    transition-t("top", "0", "0.2", "ease");
+
+    .header-shrink & {
+      top: $header-shrink-height + $component-spacing-value;
+
+      +keep-tablet() {
+        top: $header-shrink-height * 0.9 + $component-spacing-value;
+      }
+
+      +keep-mobile() {
+        top: $header-shrink-height * 0.8 + $component-spacing-value;
+      }
+    }
+
+
+    +keep-tablet() {
+      top: $header-height * 0.9 + $component-spacing-value;
+      right: 10px;
+      transform: scale(0.82);
+      transform-origin: right top;
+    }
+
+
+    +keep-mobile() {
+      top: $header-height * 0.8 + $component-spacing-value;
+      right: 5px;
+      transform: scale(0.72);
+    }
+  }
+
+
+  .right-bottom-side-tools {
+    position: fixed;
+    bottom: 5%;
+    right: 0;
   }
 }
-
-<main class="page-container">
-
-    
-
-    <div class="page-main-content">
-
-        <div class="page-main-content-top">
-            <header class="header-wrapper">
-
-    <div class="header-content">
-        <div class="left">
-            <a class="logo-title" href="/">
-                Keep Theme
-            </a>
-        </div>
-
-        <div class="right">
-            <div class="pc">
-                <ul class="menu-list">
-                    
-                        <li class="menu-item">
-                            <a class="active"
-                               href="/blog/"
-                            >
-                                HOME
-                            </a>
-                        </li>
-                    
-                        <li class="menu-item">
-                            <a class=""
-                               href="/blog/archives"
-                            >
-                                ARCHIVES
-                            </a>
-                        </li>
-                    
-                    
-                </ul>
-            </div>
-            <div class="mobile">
-                
-                <div class="icon-item menu-bar">
-                    <div class="menu-bar-middle"></div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="header-drawer">
-        <ul class="drawer-menu-list">
-            
-                <li class="drawer-menu-item flex-center">
-                    <a class="active"
-                       href="/blog/">HOME</a>
-                </li>
-            
-                <li class="drawer-menu-item flex-center">
-                    <a class=""
-                       href="/blog/archives">ARCHIVES</a>
-                </li>
-            
-        </ul>
-    </div>
-
-    <div class="window-mask"></div>
-
-</header>
-
-
-        </div>
-
-        <div class="page-main-content-middle">
-
-            <div class="main-content">
-
-                
-                    <div class="home-content-container fade-in-down-animation">
-    <ul class="home-article-list">
-        
-            <li class="home-article-item">
-
-                
-
-                <h3 class="home-article-title">
-                    <a href="/blog/2021/03/05/hello-world/">
-                        Hello World
-                    </a>
-                </h3>
-
-                <div class="home-article-content markdown-body">
-                    
-                        Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, yo...
-                    
-                </div>
-
-                <div class="home-article-meta-info-container">
-    <div class="home-article-meta-info">
-        <span><i class="fas fa-history"></i>&nbsp;<span class="home-article-date" data-date="Fri Mar 05 2021 21:15:41 GMT+0800">2021-03-05</span></span>
-        
-        
-    </div>
-
-    <a href="/blog/2021/03/05/hello-world/">Read more&nbsp;<i class="fas fa-angle-right"></i></a>
-</div>
-
-            </li>
-        
-    </ul>
-
-    <div class="home-paginator">
-        <div class="paginator">
-    
-
-    
-</div>
-
-    </div>
-</div>
-
-
-                
-            </div>
-
-        </div>
-
-        <div class="page-main-content-bottom">
-            <footer class="footer">
-    <div class="info-container">
-        <div class="copyright-info info-item">
-            &copy;
-            
-              <span>2020</span>&nbsp;-&nbsp;
-            
-            2021&nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;<a href="/">Keep Team</a>
-        </div>
-        
-        <div class="theme-info info-item">
-            Powered by <a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;|&nbsp;Theme&nbsp;<a class="theme-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep v3.4.1</a>
-        </div>
-        
-    </div>
-</footer>
-
-        </div>
-    </div>
-
-    
-
-    <div class="right-bottom-side-tools">
-        <div class="side-tools-container">
-    <ul class="side-tools-list">
-        <li class="tools-item tool-font-adjust-plus flex-center">
-            <i class="fas fa-search-plus"></i>
-        </li>
-
-        <li class="tools-item tool-font-adjust-minus flex-center">
-            <i class="fas fa-search-minus"></i>
-        </li>
-
-        <li class="tools-item tool-expand-width flex-center">
-            <i class="fas fa-arrows-alt-h"></i>
-        </li>
-
-        <li class="tools-item tool-dark-light-toggle flex-center">
-            <i class="fas fa-moon"></i>
-        </li>
-
-        <!-- rss -->
-        
-
-        
-            <li class="tools-item tool-scroll-to-top flex-center">
-                <i class="fas fa-arrow-up"></i>
-            </li>
-        
-
-        <li class="tools-item tool-scroll-to-bottom flex-center">
-            <i class="fas fa-arrow-down"></i>
-        </li>
-    </ul>
-
-    <ul class="exposed-tools-list">
-        <li class="tools-item tool-toggle-show flex-center">
-            <i class="fas fa-cog fa-spin"></i>
-        </li>
-        
-    </ul>
-</div>
-
-    </div>
-
-    
-
-    <div class="image-viewer-container">
-    <img src="">
-</div>
-
-
-    
-
-</main>
-
-
 
 
 <script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/header-shrink.js"></script><script src="/js/back2top.js"></script><script src="/js/dark-light-toggle.js"></script>
