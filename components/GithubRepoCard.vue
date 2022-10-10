@@ -1,6 +1,6 @@
 <template>
-  <a :href="githubUrl" target="_blank" class="shadow-sm md:shadow-2xl rounded-2xl">
-    <ClientImg :src="imgUrl" class="w-full rounded-2xl" />
+  <a :href="githubUrl" target="_blank" class="shadow-sm md:shadow-xl rounded-2xl">
+    <ClientImg :src="imgUrl" class="rounded-2xl max-h-52" />
   </a>
 </template>
 
