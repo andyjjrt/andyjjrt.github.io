@@ -50,6 +50,7 @@
               <li><i class="devicon-dotnetcore-plain colored"></i>.NET</li>
               <li><i class="devicon-csharp-plain colored"></i>C#</li>
               <li><i class="devicon-docker-plain colored"></i>Docker</li>
+              <li><i class="devicon-rust-plain colored"></i>Rust</li>
             </ul>
           </Card>
         </div>
@@ -89,7 +90,7 @@
             />
             <GithubRepoCard user="GDSC-wallet" repo="wallet" :dark="isDark" />
             <GithubRepoCard user="andyjjrt" repo="oj-cli" :dark="isDark" />
-            <GithubRepoCard user="andyjjrt" repo="wallet" :dark="isDark" />
+            <GithubRepoCard user="andyjjrt" repo="NCCUCourse" :dark="isDark" />
             <GithubRepoCard user="andyjjrt" repo="bazaar" :dark="isDark" />
             <GithubRepoCard user="andyjjrt" repo="bazaar-data" :dark="isDark" />
           </div>
