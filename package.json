@@ -8,14 +8,14 @@
     "postinstall": "nuxt prepare"
   },
   "devDependencies": {
-    "@nuxtjs/color-mode": "^3.2.0",
+    "@nuxtjs/color-mode": "^3.3.0",
     "@nuxtjs/svg": "^0.4.0",
-    "@nuxtjs/tailwindcss": "^6.4.1",
+    "@nuxtjs/tailwindcss": "^6.8.0",
     "@vueuse/core": "^9.13.0",
     "@vueuse/nuxt": "^9.13.0",
-    "nuxt": "^3.2.2"
+    "nuxt": "^3.5.3"
   },
   "dependencies": {
-    "daisyui": "^2.50.0"
+    "daisyui": "^3.1.5"
   }
 }
