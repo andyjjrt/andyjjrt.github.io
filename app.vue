@@ -27,24 +27,29 @@
         <div class="flex flex-col md:flex-row gap-5 md:gap-10">
           <Card title="Languages">
             <div class="flex flex-col gap-2 mt-3">
-              <SkillIcon icon="c" title="C" />
-              <SkillIcon icon="cpp" title="C++" />
-              <SkillIcon icon="py" title="Python" />
-              <SkillIcon icon="ts" title="Typescript" />
-              <SkillIcon icon="js" title="Javascript" />
-              <SkillIcon icon="vue" title="Vue" />
-              <SkillIcon icon="nuxt" title="Nuxt 3" />
-              <SkillIcon icon="react" title="React" />
+              <SkillIcon icon="c" title="C" :dark="isDark" />
+              <SkillIcon icon="cpp" title="C++" :dark="isDark" />
+              <SkillIcon icon="py" title="Python" :dark="isDark" />
+              <SkillIcon icon="ts" title="Typescript" :dark="isDark" />
+              <SkillIcon icon="js" title="Javascript" :dark="isDark" />
+              <SkillIcon icon="vue" title="Vue" :dark="isDark" />
+              <SkillIcon icon="nuxt" title="Nuxt 3" :dark="isDark" />
+              <SkillIcon icon="react" title="React" :dark="isDark" />
+              <SkillIcon icon="rust" title="Rust" :dark="isDark" />
             </div>
           </Card>
           <Card title="Tools">
-            <div class="flex flex-col gap-2 mt-3s">
-              <SkillIcon icon="vscode" title="VS Code" />
-              <SkillIcon icon="github" title="Github" />
-              <SkillIcon icon="githubactions" title="Github Actions" />
-              <SkillIcon icon="nginx" title="Nginx" />
-              <SkillIcon icon="linux" title="Linux" />
-              <SkillIcon icon="docker" title="Docker" />
+            <div class="flex flex-col gap-2 mt-3">
+              <SkillIcon icon="vscode" title="VS Code" :dark="isDark" />
+              <SkillIcon icon="github" title="Github" :dark="isDark" />
+              <SkillIcon
+                icon="githubactions"
+                title="Github Actions"
+                :dark="isDark"
+              />
+              <SkillIcon icon="nginx" title="Nginx" :dark="isDark" />
+              <SkillIcon icon="linux" title="Linux" :dark="isDark" />
+              <SkillIcon icon="docker" title="Docker" :dark="isDark" />
             </div>
           </Card>
         </div>
@@ -60,14 +65,14 @@
             />
           </Card>
           <Card class="p-4">
-            <div class="mx-auto my-auto">
+            <div class="flex items-center h-full">
               <ClientImg
                 :src="
                   imgUrl(
                     'https://github-readme-stats-jrzz.vercel.app/api/top-langs?username=andyjjrt&layout=compact&hide=html,Lua'
                   )
                 "
-                class="rounded-xl"
+                class="rounded-xl w-full"
               />
             </div>
           </Card>
@@ -95,25 +100,18 @@
             <a
               href="https://www.facebook.com/andy.hung.7505/"
               target="_about"
-              class="btn bg-blue-700 hover:bg-blue-800 border-none flex flex-row gap-1"
+              class="btn btn-primary"
             >
-              <i class="devicon-facebook-plain"></i>
               Facebook
             </a>
-            <a
-              href="https://github.com/andyjjrt"
-              target="_about"
-              class="btn bg-neutral-700 hover:bg-neutral-900 border-none flex flex-row gap-1"
-            >
-              <i class="devicon-github-original"></i>
+            <a href="https://github.com/andyjjrt" target="_about" class="btn">
               Github
             </a>
             <a
               href="https://www.linkedin.com/in/chun-chen-hung-245bb8184/"
               target="_about"
-              class="btn bg-blue-700 hover:bg-blue-800 border-none flex flex-row gap-1"
+              class="btn btn-primary"
             >
-              <i class="devicon-linkedin-plain"></i>
               LinkedIn
             </a>
           </div>
