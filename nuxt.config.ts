@@ -17,12 +17,6 @@ export default {
         { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
         { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: true },
         { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap' },
-        { rel: 'stylesheet', href: 'https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css' }
-      ],
-      // please note that this is an area that is likely to change
-      style: [
-        // <style type="text/css">:root { color: red }</style>
-        { children: ':root { color: red }', type: 'text/css' }
       ],
       noscript: [
         // <noscript>Javascript is required</noscript>

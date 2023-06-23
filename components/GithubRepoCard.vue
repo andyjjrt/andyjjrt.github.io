@@ -1,5 +1,5 @@
 <template>
-  <a :href="githubUrl" target="_blank" class="shadow-sm md:shadow-xl rounded-2xl">
+  <a :href="githubUrl" target="_blank" class="shadow-sm md:shadow-xl rounded-2xl bg-base-100 flex items-center">
     <ClientImg :src="imgUrl" class="rounded-2xl max-h-52" />
   </a>
 </template>

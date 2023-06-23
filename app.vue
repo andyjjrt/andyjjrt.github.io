@@ -9,64 +9,57 @@
       <h1 class="text-4xl font-bold text-center">Hi, I am Andy</h1>
       <div class="py-6 flex flex-col gap-5 md:gap-10">
         <Card title="Intro">
-          嗨，我是洪晙宸，是個全端業餘工程師。<br />
-          前端專攻Vue, Vuex, Vite，同時也會React, Redux，用過Vuetify, mui,
-          bootstrap等UI libarary。<br />
-          後端接觸較少，使用Express框架。<br />
-          平常寫些小小專案，也喜歡研究新技術，包括但不限於網頁技術。
+          <div class="mt-3">
+            嗨，我是洪晙宸，是個全端業餘工程師。<br />
+            前端專攻Vue, Vuex, Vite，同時也會React, Redux，用過Vuetify, mui,
+            bootstrap等UI libarary。<br />
+            後端頗有接觸，使用Express和Flask框架。<br />
+            平常寫些小小專案，也喜歡研究新技術，包括但不限於網頁技術。<br />
+            目前初步接觸llm和推薦系統。
+          </div>
         </Card>
         <Card title="Profile">
-          <ul>
+          <ul class="mt-3">
             <li>國立政治大學資訊科學系 (NCCUCS)</li>
             <li>GDSC NCCU 22' Core Team</li>
           </ul>
         </Card>
         <div class="flex flex-col md:flex-row gap-5 md:gap-10">
-          <Card title="Skills">
-            <ul class="languages">
-              <li><i class="devicon-vuejs-plain colored"></i>Vue</li>
-              <li><i class="devicon-vuetify-line colored"></i>Vuetify</li>
-              <li><i class="devicon-react-original colored"></i>React</li>
-              <li><i class="devicon-jquery-plain colored"></i>Jquery</li>
-              <li><i class="devicon-redux-original colored"></i>Redux</li>
-              <li><i class="devicon-bootstrap-plain colored"></i>Bootstrap</li>
-              <li><i class="devicon-html5-plain colored"></i>HTML</li>
-              <li>
-                <i class="devicon-javascript-plain colored"></i>Javascript
-              </li>
-              <li><i class="devicon-css3-plain colored"></i>CSS</li>
-              <li>
-                <i class="devicon-github-original colored block dark:hidden"></i
-                ><i class="devicon-github-original hidden dark:block"></i>Github
-              </li>
-              <li><i class="devicon-c-plain colored"></i>C</li>
-              <li><i class="devicon-cplusplus-plain colored"></i>C++</li>
-              <li><i class="devicon-python-plain colored"></i>Python</li>
-            </ul>
+          <Card title="Languages">
+            <div class="flex flex-col gap-2 mt-3">
+              <SkillIcon icon="c" title="C" />
+              <SkillIcon icon="cpp" title="C++" />
+              <SkillIcon icon="py" title="Python" />
+              <SkillIcon icon="ts" title="Typescript" />
+              <SkillIcon icon="js" title="Javascript" />
+              <SkillIcon icon="vue" title="Vue" />
+              <SkillIcon icon="nuxt" title="Nuxt 3" />
+              <SkillIcon icon="react" title="React" />
+            </div>
           </Card>
-          <Card title="Learning">
-            <ul class="languages">
-              <li><i class="devicon-java-plain colored"></i>Java</li>
-              <li><i class="devicon-dotnetcore-plain colored"></i>.NET</li>
-              <li><i class="devicon-csharp-plain colored"></i>C#</li>
-              <li><i class="devicon-docker-plain colored"></i>Docker</li>
-              <li><i class="devicon-rust-plain colored"></i>Rust</li>
-            </ul>
+          <Card title="Tools">
+            <div class="flex flex-col gap-2 mt-3s">
+              <SkillIcon icon="vscode" title="VS Code" />
+              <SkillIcon icon="github" title="Github" />
+              <SkillIcon icon="githubactions" title="Github Actions" />
+              <SkillIcon icon="nginx" title="Nginx" />
+              <SkillIcon icon="linux" title="Linux" />
+              <SkillIcon icon="docker" title="Docker" />
+            </div>
           </Card>
         </div>
         <div class="flex flex-col md:flex-row gap-5 md:gap-10">
-          <Card class="py-1 px-1 lg:px-5">
-            <div class="mx-auto my-auto">
-              <ClientImg
-                :src="
-                  imgUrl(
-                    'https://github-readme-stats-jrzz.vercel.app/api?username=andyjjrt'
-                  )
-                "
-              />
-            </div>
+          <Card class="p-4">
+            <ClientImg
+              :src="
+                imgUrl(
+                  'https://github-readme-stats-jrzz.vercel.app/api?username=andyjjrt'
+                )
+              "
+              class="rounded-xl"
+            />
           </Card>
-          <Card class="py-1 px-1 lg:px-5">
+          <Card class="p-4">
             <div class="mx-auto my-auto">
               <ClientImg
                 :src="
@@ -74,20 +67,17 @@
                     'https://github-readme-stats-jrzz.vercel.app/api/top-langs?username=andyjjrt&layout=compact&hide=html,Lua'
                   )
                 "
+                class="rounded-xl"
               />
             </div>
           </Card>
         </div>
-        <Card class="pb-2 px-2 md:px-4 md:pb-4 lg:px-6 lg:pb-6">
+        <Card class="pb-2 px-4 md:pb-4 lg:px-6 lg:pb-6">
           <template v-slot:title>
-            <h2 class="card-title text-2xl font-bold px-6">Projects</h2>
+            <h2 class="card-title text-2xl font-bold px-4 pb-3">Projects</h2>
           </template>
           <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <GithubRepoCard
-              user="andyjjrt"
-              repo="bootstrap-ojFE"
-              :dark="isDark"
-            />
+            <GithubRepoCard user="andyjjrt" repo="ojFE" :dark="isDark" />
             <GithubRepoCard user="GDSC-wallet" repo="wallet" :dark="isDark" />
             <GithubRepoCard user="andyjjrt" repo="oj-cli" :dark="isDark" />
             <GithubRepoCard user="andyjjrt" repo="NCCUCourse" :dark="isDark" />
