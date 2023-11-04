@@ -43,11 +43,15 @@ const githubUrl = computed(() => {
   return "https://github.com/" + props.user + "/" + props.repo;
 });
 
+
+onMounted(() => {
+  display.value = true;
+})
+
 watch(
   () => colorMode.preference,
   (val) => {
     if (val) {
-      display.value = true;
       modifiers.value.bg_color = colorSchema(colorMode.preference)[
         "base-100"
       ].replace("#", "");
