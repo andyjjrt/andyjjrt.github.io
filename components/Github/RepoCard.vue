@@ -43,19 +43,25 @@ const githubUrl = computed(() => {
   return "https://github.com/" + props.user + "/" + props.repo;
 });
 
-
 onMounted(() => {
+  modifiers.value.bg_color = colorSchema(colorMode.value)["base-100"].replace(
+    "#",
+    ""
+  );
+  modifiers.value.text_color = colorSchema(colorMode.value)[
+    "base-content"
+  ].replace("#", "");
   display.value = true;
-})
+});
 
 watch(
-  () => colorMode.preference,
+  () => colorMode.value,
   (val) => {
     if (val) {
-      modifiers.value.bg_color = colorSchema(colorMode.preference)[
+      modifiers.value.bg_color = colorSchema(colorMode.value)[
         "base-100"
       ].replace("#", "");
-      modifiers.value.text_color = colorSchema(colorMode.preference)[
+      modifiers.value.text_color = colorSchema(colorMode.value)[
         "base-content"
       ].replace("#", "");
     }
