@@ -13,7 +13,7 @@
         andyjjrt
       </a>
     </div>
-    <div class="flex-none">
+    <div class="flex gap-2">
       <ThemeSwitcher />
     </div>
   </div>

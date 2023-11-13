@@ -1,15 +1,13 @@
 <template>
-  <Card class="p-4">
-    <div class="flex items-center h-full bg-base-100 rounded-md">
-      <NuxtImg
-        v-if="display"
-        provider="GithubStatus"
-        src="/api"
-        :modifiers="modifiers"
-        class="h-full min-h-16 md:min-h-[96px] lg:min-h-[192px]"
-      />
-    </div>
-  </Card>
+  <div class="hover:shadow-sm hover:md:shadow-xl transition-shadow rounded-2xl dark:bg-base-100 flex items-center">
+    <NuxtImg
+      v-if="display"
+      provider="GithubStatus"
+      src="/api"
+      :modifiers="modifiers"
+      class="rounded-2xl h-full min-h-16 md:min-h-[96px] lg:min-h-[192px]"
+    />
+  </div>
 </template>
 
 <script setup lang="ts">

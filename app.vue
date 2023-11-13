@@ -55,15 +55,20 @@
               </div>
             </Card>
           </div>
-          <div class="flex md:grid grid-cols-2 flex-col gap-6">
-            <GithubStatCard user="andyjjrt" />
-            <GithubLanguageCard user="andyjjrt" />
-          </div>
-          <Card class="pb-2 px-4 md:pb-4 lg:px-6 lg:pb-6">
+          <Card class="pb-4 px-4 lg:px-6 lg:pb-6">
+            <template v-slot:title>
+              <h2 class="card-title text-2xl font-bold px-4 pb-3">Github Activities</h2>
+            </template>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <GithubStatCard user="andyjjrt" />
+              <GithubLanguageCard user="andyjjrt" />
+            </div>
+          </Card>
+          <Card class="pb-4 px-4 lg:px-6 lg:pb-6">
             <template v-slot:title>
               <h2 class="card-title text-2xl font-bold px-4 pb-3">Projects</h2>
             </template>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
               <GithubRepoCard user="andyjjrt" repo="ojFE" :dark="isDark" />
               <GithubRepoCard user="GDSC-wallet" repo="wallet" :dark="isDark" />
               <GithubRepoCard user="andyjjrt" repo="oj-cli" :dark="isDark" />
@@ -76,6 +81,11 @@
               <GithubRepoCard
                 user="andyjjrt"
                 repo="bazaar-data"
+                :dark="isDark"
+              />
+              <GithubRepoCard
+                user="andyjjrt"
+                repo="slidev-theme-andyjjrt"
                 :dark="isDark"
               />
             </div>
@@ -104,7 +114,7 @@
                 target="_about"
                 class="btn btn-primary"
               >
-              <Icon name="mingcute:linkedin-fill" class="h-6 w-6" />
+                <Icon name="mingcute:linkedin-fill" class="h-6 w-6" />
                 LinkedIn
               </a>
             </div>
