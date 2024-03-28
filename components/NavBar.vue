@@ -14,6 +14,20 @@
       </a>
     </div>
     <div class="flex gap-2">
+      <a
+        class="btn btn-ghost normal-case"
+        href="https://slidev  .andyjjrt.cc"
+        target="_blank"
+      >
+        Slides
+      </a>
+      <a
+        class="btn btn-ghost normal-case"
+        href="https://status.andyjjrt.cc"
+        target="_blank"
+      >
+        Status
+      </a>
       <ThemeSwitcher />
     </div>
   </div>

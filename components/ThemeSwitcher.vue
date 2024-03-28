@@ -1,6 +1,6 @@
 <template>
   <div class="dropdown dropdown-end">
-    <label tabindex="0" class="btn btn-square">
+    <label tabindex="0" class="btn btn-square  btn-ghost">
       <Icon name="mingcute:color-filter-line" class="h-6 w-6" />
     </label>
     <ul
