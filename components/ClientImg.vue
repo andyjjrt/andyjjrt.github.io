@@ -1,20 +1,16 @@
 <template>
-  <ClientOnly>
-    <img :src="src" :class="class" />
-  </ClientOnly>
+  <NuxtImg :src="src" :class="class" />
 </template>
 
-<script>
-export default {
-  props: {
-    src: {
-      type: String,
-      default: "",
-    },
-    class: {
-      type: String,
-      default: "",
-    }
+<script setup>
+defineProps({
+  src: {
+    type: String,
+    default: "",
   },
-};
+  class: {
+    type: String,
+    default: "",
+  },
+});
 </script>
