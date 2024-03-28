@@ -12,12 +12,8 @@
         <div class="py-6 flex flex-col gap-5 md:gap-10">
           <Card title="Intro">
             <div class="mt-3">
-              嗨，我是洪晙宸，是個全端業餘工程師。<br />
-              前端專攻Vue, Vuex, Vite，同時也會React, Redux，用過Vuetify, mui,
-              bootstrap等UI libarary。<br />
-              後端頗有接觸，使用Express和Flask框架。<br />
+              嗨，我是洪晙宸，是個全端業餘工程師，目前開始接觸大型語言模型和推薦系統。<br />
               平常寫些小小專案，也喜歡研究新技術，包括但不限於網頁技術。<br />
-              目前初步接觸llm和推薦系統。
             </div>
           </Card>
           <Card title="Profile">
@@ -57,7 +53,9 @@
           </div>
           <Card class="pb-4 px-4 lg:px-6 lg:pb-6">
             <template v-slot:title>
-              <h2 class="card-title text-2xl font-bold px-4 pb-3">Github Activities</h2>
+              <h2 class="card-title text-2xl font-bold px-4 pb-3">
+                Github Activities
+              </h2>
             </template>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
               <GithubStatCard user="andyjjrt" />
@@ -77,12 +75,8 @@
                 repo="NCCUCourse"
                 :dark="isDark"
               />
-              <GithubRepoCard user="andyjjrt" repo="bazaar" :dark="isDark" />
-              <GithubRepoCard
-                user="andyjjrt"
-                repo="bazaar-data"
-                :dark="isDark"
-              />
+              <GithubRepoCard user="andyjjrt" repo="dcbot" :dark="isDark" />
+              <GithubRepoCard user="andyjjrt" repo="slides" :dark="isDark" />
               <GithubRepoCard
                 user="andyjjrt"
                 repo="slidev-theme-andyjjrt"
