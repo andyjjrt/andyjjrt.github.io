@@ -1,6 +1,6 @@
 <template>
   <div
-    class="hover:shadow-sm hover:md:shadow-xl transition-shadow rounded-2xl dark:bg-base-100 flex items-center"
+    class="hover:shadow-sm hover:md:shadow-xl transition-shadow rounded-2xl bg-base-100 flex items-center"
   >
     <NuxtImg
       v-if="display"

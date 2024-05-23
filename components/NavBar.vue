@@ -16,7 +16,7 @@
     <div class="flex gap-2">
       <a
         class="btn btn-ghost normal-case"
-        href="https://slidev  .andyjjrt.cc"
+        href="https://slidev.andyjjrt.cc"
         target="_blank"
       >
         Slides
