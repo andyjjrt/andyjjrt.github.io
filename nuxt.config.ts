@@ -11,8 +11,10 @@ export default {
     "nuxt-icon",
     "@vueuse/nuxt",
   ],
+
   buildModules: ["@nuxtjs/svg"],
   target: "static",
+
   app: {
     head: {
       title: "Andy's website",
@@ -41,9 +43,11 @@ export default {
       ],
     },
   },
+
   colorMode: {
     dataValue: "theme",
   },
+
   image: {
     providers: {
       GithubStatus: {
@@ -52,4 +56,6 @@ export default {
       },
     },
   },
+
+  compatibilityDate: "2024-08-24",
 };
