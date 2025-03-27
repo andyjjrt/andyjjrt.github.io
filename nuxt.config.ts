@@ -1,20 +1,12 @@
-import fs from "fs";
-import path from "path";
-import axios from "axios";
+import tailwindcss from "@tailwindcss/vite";
 
-// https://v3.nuxtjs.org/api/configuration/nuxt.config
-export default {
-  modules: [
-    "@nuxtjs/tailwindcss",
-    "@nuxt/image",
-    "@nuxtjs/color-mode",
-    "nuxt-icon",
-    "@vueuse/nuxt",
-  ],
-
-  buildModules: ["@nuxtjs/svg"],
+export default defineNuxtConfig({
+  compatibilityDate: "2024-08-24",
+  vite: {
+    plugins: [tailwindcss()],
+  },
+  css: ["~/assets/css/main.css"],
   target: "static",
-
   app: {
     head: {
       title: "Andy's website",
@@ -30,11 +22,11 @@ export default {
         {
           rel: "preconnect",
           href: "https://fonts.gstatic.com",
-          crossorigin: true,
+          crossorigin: "anonymous",
         },
         {
           rel: "stylesheet",
-          href: "https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap",
+          href: "https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;600;700&display=swap",
         },
       ],
       noscript: [
@@ -43,11 +35,6 @@ export default {
       ],
     },
   },
-
-  colorMode: {
-    dataValue: "theme",
-  },
-
   image: {
     providers: {
       GithubStatus: {
@@ -57,5 +44,5 @@ export default {
     },
   },
 
-  compatibilityDate: "2024-08-24",
-};
+  modules: ["@nuxt/image", "@vueuse/nuxt", "@nuxt/icon"],
+});

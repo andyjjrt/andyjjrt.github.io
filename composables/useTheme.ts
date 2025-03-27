@@ -1,17 +1,14 @@
-import themeColors from "daisyui/src/theming/themes.js";
-import type { Theme } from "daisyui";
+import { useColorMode } from "@vueuse/core";
 
 export const useTheme = () => {
-  const themes = [
-    "light",
-    "dark",
-  ];
+  const mode = useColorMode({
+    attribute: "data-theme",
+    emitAuto: false,
+    modes: {
+      light: "nord",
+      dark: "sunset",
+    },
+  });
 
-  const colorSchema = (theme: string) => {
-    return themeColors[`[data-theme=${theme}]` as `[data-theme=${Theme}]`];
-  };
-
-  return { themes, colorSchema };
+  return { mode };
 };
-
-export default useTheme;

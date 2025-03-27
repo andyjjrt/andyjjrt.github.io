@@ -1,19 +1,16 @@
 <template>
-  <div class="card w-auto grow bg-base-300 shadow-xl">
-    <div class="card-body gap-0" :class="class">
-      <h2 class="card-title text-2xl font-bold">{{ title }}</h2>
-      <slot name="title"></slot>
-      <slot></slot>
+  <div class="card bg-base-200 w-full card-md shadow-md rounded-2xl">
+    <div class="card-body">
+      <h2 class="card-title font-bold">{{ title }}</h2>
+      <p>
+        <slot />
+      </p>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
-const props = withDefaults(defineProps<{
-  title?: string;
-  class?: string;
-}>(), {
-  title: "",
-  class: ""
-})
+defineProps<{
+  title: string;
+}>();
 </script>
