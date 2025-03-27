@@ -1,26 +1,34 @@
 <template>
-  <div class="dropdown dropdown-end">
-    <label tabindex="0" class="btn btn-square  btn-ghost">
-      <Icon name="mingcute:color-filter-line" class="h-6 w-6" />
-    </label>
-    <ul
-      tabindex="0"
-      class="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52 flex-nowrap overflow-auto"
-    >
-      <li v-for="theme in themes">
-        <a class="rounded-md" @click="changeTheme(theme)">
-          {{ theme }}
-        </a>
-      </li>
-    </ul>
-  </div>
+  <label class="swap swap-rotate">
+    <input type="checkbox" v-model="value" />
+
+    <Icon
+      name="material-symbols:moon-stars-rounded"
+      class="swap-off fill-current"
+    />
+    <Icon
+      name="material-symbols:sunny-rounded"
+      class="swap-on fill-current"
+    />
+  </label>
 </template>
 
-<script setup lang="ts">
-const colorMode = useColorMode();
-const { themes } = useTheme();
+<script setup>
+import { useDark, useToggle } from "@vueuse/core";
 
-const changeTheme = (theme: string) => {
-  colorMode.preference = theme;
-};
+const isDark = useDark({
+  selector: "html",
+  attribute: "data-theme",
+  valueDark: "sunset",
+  valueLight: "nord",
+});
+
+const toggleDark = useToggle(isDark);
+
+const value = computed({
+  get: () => isDark.value,
+  set: (val) => {
+    toggleDark();
+  },
+});
 </script>
