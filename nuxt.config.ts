@@ -1,12 +1,6 @@
-import tailwindcss from "@tailwindcss/vite";
-
 export default defineNuxtConfig({
-  compatibilityDate: "2024-08-24",
-  vite: {
-    plugins: [tailwindcss()],
-  },
+  compatibilityDate: "2026-02-14",
   css: ["~/assets/css/main.css"],
-  target: "static",
   app: {
     head: {
       title: "Andy's website",
@@ -31,18 +25,24 @@ export default defineNuxtConfig({
       ],
       noscript: [
         // <noscript>Javascript is required</noscript>
-        { children: "Javascript is required" },
+        { innerHTML: "Javascript is required" },
       ],
     },
   },
-  image: {
-    providers: {
-      GithubStatus: {
-        name: "GithubStatus",
-        provider: "~/providers/GithubStatus.ts",
-      },
+  icon: {
+    mode: "css",
+    cssLayer: "base",
+    provider: "iconify",
+    clientBundle: {
+      scan: true,
+      sizeLimitKb: 256,
     },
+    customCollections: [
+      {
+        prefix: "custom",
+        dir: "./assets/icons",
+      },
+    ],
   },
-
-  modules: ["@nuxt/image", "@vueuse/nuxt", "@nuxt/icon"],
+  modules: ["@vueuse/nuxt", "@nuxt/ui", "@nuxt/icon", "@nuxt/image"],
 });
