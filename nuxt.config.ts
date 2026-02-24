@@ -10,25 +10,17 @@ export default defineNuxtConfig({
         { name: "description", content: "洪晙宸的個人網站" },
         { name: "author", content: "洪晙宸" },
       ],
-      link: [
-        // <link rel="stylesheet" href="https://myawesome-lib.css">
-        { rel: "preconnect", href: "https://fonts.googleapis.com" },
-        {
-          rel: "preconnect",
-          href: "https://fonts.gstatic.com",
-          crossorigin: "anonymous",
-        },
-        {
-          rel: "stylesheet",
-          href: "https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;600;700&display=swap",
-        },
-      ],
       noscript: [
         // <noscript>Javascript is required</noscript>
         { innerHTML: "Javascript is required" },
       ],
     },
   },
+
+  routeRules: {
+    "/links/**": { appLayout: false },
+  },
+
   icon: {
     mode: "css",
     cssLayer: "base",
@@ -40,9 +32,20 @@ export default defineNuxtConfig({
     customCollections: [
       {
         prefix: "custom",
-        dir: "./assets/icons",
+        dir: "./app/assets/icons",
       },
     ],
   },
-  modules: ["@vueuse/nuxt", "@nuxt/ui", "@nuxt/icon", "@nuxt/image"],
+
+  modules: [
+    "@vueuse/nuxt",
+    "@nuxt/icon",
+    "@nuxt/image",
+    "@nuxt/fonts",
+    "@nuxt/ui",
+  ],
+
+  devtools: {
+    enabled: true,
+  },
 });

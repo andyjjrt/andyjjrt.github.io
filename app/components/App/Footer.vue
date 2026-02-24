@@ -11,7 +11,7 @@
         icon="i-simple-icons-facebook"
         color="neutral"
         variant="ghost"
-        to="https://www.facebook.com/andy.hung.7505/"
+        to="/links/facebook"
         target="_blank"
         aria-label="Facebook"
       />
@@ -19,7 +19,7 @@
         icon="i-simple-icons-linkedin"
         color="neutral"
         variant="ghost"
-        to="https://www.linkedin.com/in/andy-hung-245bb8184/"
+        to="/links/linkedin"
         target="_blank"
         aria-label="LinkedIn"
       />
@@ -27,7 +27,7 @@
         icon="i-simple-icons-github"
         color="neutral"
         variant="ghost"
-        to="https://github.com/andyjjrt"
+        to="/links/github"
         target="_blank"
         aria-label="GitHub"
       />
