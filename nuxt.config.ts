@@ -3,12 +3,11 @@ export default defineNuxtConfig({
   css: ["~/assets/css/main.css"],
   app: {
     head: {
-      title: "Andy's website",
+      title: "andyjjrt's website",
       meta: [
         { name: "viewport", content: "width=device-width, initial-scale=1" },
-        { name: "description", content: "Andy Hung's website" },
-        { name: "description", content: "洪晙宸的個人網站" },
-        { name: "author", content: "洪晙宸" },
+        { name: "description", content: "andyjjrt's website" },
+        { name: "author", content: "andyjjrt" },
       ],
       noscript: [
         // <noscript>Javascript is required</noscript>

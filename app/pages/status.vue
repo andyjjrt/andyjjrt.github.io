@@ -1,7 +1,7 @@
 <template>
   <UPage>
     <!-- Header Section -->
-    <UPageHeader title="Service Status" description="Real-time monitoring and uptime tracking for all services">
+    <UPageHeader title="Service Status" description="Uptime tracker powered by Uptime.js">
       <template #headline>
         <UBadge icon="i-lucide-loader" size="lg" color="neutral" variant="soft" v-if="!data">
           Loading
@@ -33,6 +33,14 @@
 
 <script setup lang="ts">
 import type { ServiceList } from '~/components/Status/status'
+
+// Set page metadata
+useHead({
+  title: 'Service Status | andyjjrt',
+  meta: [
+    { name: 'description', content: 'Uptime tracker powered by Uptime.js' }
+  ]
+})
 
 const { data, pending } = await useFetch('https://raw.githubusercontent.com/andyjjrt/status/refs/heads/master/history/summary.json', {
   server: false,
