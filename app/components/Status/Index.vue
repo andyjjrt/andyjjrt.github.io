@@ -7,7 +7,7 @@
           <UIcon v-else name="i-lucide-trending-down" class="text-error w-5 h-5" />
           <h2 class="font-medium text-lg m-0">{{ service.name }}</h2>
         </div>
-        <UBadge v-if="service.status === 'up'" label="Up" color="success" variant="soft" size="sm" />
+        <UBadge v-if="service.status === 'up'" :label="service.uptimeMonth" color="success" variant="soft" size="sm" />
         <UBadge v-else label="Down" color="error" variant="soft" size="sm" />
       </div>
     </template>
@@ -44,7 +44,8 @@ const { status, data: summary } = await useFetch(`https://raw.githubusercontent.
   }
 })
 
-const MAX_DAYS = 90
+const isSmallScreen = useMediaQuery('(max-width: 640px)')
+const MAX_DAYS = computed(() => isSmallScreen.value ? 30 : 90)
 
 const chartData = computed(() => {
   const data = []
@@ -56,7 +57,7 @@ const chartData = computed(() => {
   startDate.setHours(0, 0, 0, 0)
 
   // Always iterate exactly 30 times
-  for (let i = MAX_DAYS - 1; i >= 0; i--) {
+  for (let i = MAX_DAYS.value - 1; i >= 0; i--) {
     const d = new Date(endDate)
     d.setDate(d.getDate() - i)
 
@@ -64,9 +65,9 @@ const chartData = computed(() => {
     const compareDate = new Date(d)
     compareDate.setHours(0, 0, 0, 0)
 
-    const year = d.getFullYear()
-    const month = String(d.getMonth() + 1).padStart(2, '0')
-    const day = String(d.getDate()).padStart(2, '0')
+    const year = new Date(d).getFullYear()
+    const month = String(new Date(d).getMonth() + 1).padStart(2, '0')
+    const day = String(new Date(d).getDate()).padStart(2, '0')
     const dateKey = `${year}-${month}-${day}`
 
     let currentStatus: number
@@ -82,7 +83,7 @@ const chartData = computed(() => {
 
     data.push({
       dateKey,
-      dateStr: new Intl.DateTimeFormat('en-US', { month: 'short', day: 'numeric', year: 'numeric' }).format(d),
+      dateStr: new Intl.DateTimeFormat(undefined, { month: 'short', day: 'numeric', year: 'numeric' }).format(d),
       status: currentStatus,
       minutesDown: minsDown,
       value: 1 // Fixed height for the bar
@@ -100,9 +101,9 @@ const color = (d: any) => {
 }
 const triggers = {
   [StackedBar.selectors.bar]: (d: any) => {
-    if (d.datum.status === 1) return `${d.datum.dateKey}: Online`
-    if (d.datum.status === 0) return `${d.datum.dateKey}: Down for ${d.datum.minutesDown} minutes`
-    return `${d.datum.dateKey}: No Data`
+    if (d.datum.status === 1) return `${d.datum.dateStr}: Online`
+    if (d.datum.status === 0) return `${d.datum.dateStr}: Down for ${d.datum.minutesDown} minutes`
+    return `${d.datum.dateStr}: No Data`
   }
 }
 </script>
