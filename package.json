@@ -14,18 +14,21 @@
     "@nuxt/icon": "2.2.1",
     "@nuxt/image": "2.0.0",
     "@vueuse/nuxt": "13.0.0",
-    "axios": "^1.7.2",
     "nuxt": "^4.3.1",
     "vue": "^3.5.28"
   },
   "dependencies": {
     "@nuxt/ui": "^4.4.0",
+    "@types/js-yaml": "^4.0.9",
+    "@unovis/vue": "^1.6.4",
+    "js-yaml": "^4.1.1",
     "tailwindcss": "^4.1.18"
   },
   "packageManager": "pnpm@10.6.5+sha512.cdf928fca20832cd59ec53826492b7dc25dc524d4370b6b4adbf65803d32efaa6c1c88147c0ae4e8d579a6c9eec715757b50d4fa35eea179d868eada4ed043af",
   "pnpm": {
     "onlyBuiltDependencies": [
       "esbuild",
+      "maplibre-gl",
       "sharp",
       "vue-demi"
     ]

@@ -5,6 +5,14 @@
     </template>
 
     <template #right>
+      <UButton
+        to="/status"
+        variant="ghost"
+        color="neutral"
+        icon="i-lucide-trending-up"
+      >
+        Status
+      </UButton>
       <UColorModeButton />
     </template>
   </UHeader>

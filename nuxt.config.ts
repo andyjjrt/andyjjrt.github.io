@@ -42,7 +42,7 @@ export default defineNuxtConfig({
     "@nuxt/icon",
     "@nuxt/image",
     "@nuxt/fonts",
-    "@nuxt/ui",
+    "@nuxt/ui"
   ],
 
   devtools: {
