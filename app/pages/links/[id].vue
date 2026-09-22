@@ -5,7 +5,7 @@ const { links } = useLinks();
 const targetUrl = links[route.params.id as string] || "/";
 
 useHead({
-  title: "Redirecting...",
+  title: `${route.params.id} | andyjjrt`,
   meta: [{ "http-equiv": "refresh", content: `0;url=${targetUrl}` }],
   script: [{ innerHTML: `window.location.replace("${targetUrl}")` }],
 });
