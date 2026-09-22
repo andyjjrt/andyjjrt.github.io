@@ -1,0 +1,22 @@
+version: 2
+
+updates:
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "09:00"
+      timezone: "Asia/Taipei"
+
+    open-pull-requests-limit: 5
+
+    # minor、patch 更新集中在同一個 PR
+    # major 更新維持各自獨立的 PR
+    groups:
+      minor-and-patch:
+        patterns:
+          - "*"
+        update-types:
+          - "minor"
+          - "patch"
